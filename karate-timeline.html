@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-2-thread-1","id":1},{"content":"pool-2-thread-2","id":2},{"content":"pool-2-thread-3","id":3},{"content":"pool-2-thread-4","id":4}];
+var items = [{"id":1,"group":1,"content":"com\/petstore\/create_pet[1.1:33]","start":1757900197421,"end":1757900198448,"title":"com\/petstore\/create_pet[1.1:33] 01:36:37.421-01:36:38.448 crear una mascota mediante el servicio de creacion de mascotas","className":"failed"},{"id":2,"group":2,"content":"com\/petstore\/search_pet[1:6]","start":1757900197421,"end":1757900198544,"title":"com\/petstore\/search_pet[1:6] 01:36:37.421-01:36:38.544 Buscar mascota por Id"},{"id":3,"group":3,"content":"com\/petstore\/search_pet[2:16]","start":1757900197421,"end":1757900198332,"title":"com\/petstore\/search_pet[2:16] 01:36:37.421-01:36:38.332 Buscar mascotas por status"},{"id":4,"group":4,"content":"com\/petstore\/update_pet[1:6]","start":1757900197421,"end":1757900198673,"title":"com\/petstore\/update_pet[1:6] 01:36:37.421-01:36:38.673 Modificar una mascota mediante el servicio de modificacion de mascotas","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
