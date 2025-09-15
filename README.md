@@ -39,8 +39,8 @@ Estructura del proyecto
 Pasos para ejecutar localmente (rápido)
 ---------------------------------------
 1. Clonar el repo:
-   git clone https://github.com/TU-USUARIO/TU-REPO.git
-   cd TU-REPO
+   git clone https://github.com/hernandomolina/pruebaTecnicaAPISofka.git
+   
 
 2. Ejecutar todos los tests (Maven):
    mvn clean test
@@ -72,5 +72,4 @@ Buenas prácticas / notas
 - Para suites estables en CI, usa WireMock (mock server) o Testcontainers para no depender de la API pública.
 - Mantén los payloads JSON en `src/test/resources/.../data/` y carga con: `read('data/create_modify_pet_request.json')`.
 - Usa `call`/`callonce` para setup reutilizable entre features (crear datos iniciales).
-- Para fallos controlados usa `Then status <expected>` o `karate.fail('mensaje')` si quieres registrar un fallo con mensaje personalizado.
 

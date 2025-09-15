@@ -23,6 +23,11 @@ jobs:
       - name: Compilar y ejecutar tests
         run: mvn clean test -B
 
+      - name: Crear index.html de redirección
+        if: always()
+        run: |
+          echo '<meta http-equiv="refresh" content="0; url=karate-summary.html">' > target/karate-reports/index.html
+
       - name: Deploy report to GitHub Pages
         if: always() # publica aunque haya fallos en los tests
         uses: peaceiris/actions-gh-pages@v3
