@@ -1,0 +1,30 @@
+Conclusiones del ejercicio - Pruebas API PetStore (Karate)
+=========================================================
+
+1) Funcionamiento general
+-------------------------
+- La suite de pruebas en Karate está implementada correctamente (features, datos en /data, runner Maven/JUnit).
+- Los tests se ejecutan y generan reportes HTML en target/karate-reports/karate-summary.html.
+
+2) Observaciones sobre la API pública (Swagger PetStore)
+-------------------------------------------------------
+- La API usada (https://petstore.swagger.io) es un entorno público/compartido de demostración.
+- En este entorno **no hay garantía de persistencia** y los datos pueden ser modificados por cualquier usuario.
+- El endpoint `findByStatus` devuelve mascotas precargadas en el entorno demo y no necesariamente reflejará las mascotas creadas por la prueba.
+- Por lo anterior, validar actualizaciones con `GET /v2/pet/{id}` es más fiable que depender de `findByStatus` en este sandbox.
+
+3) Efectos observados en las pruebas
+------------------------------------
+- IDs estáticos (101, 102, ...) causaron fallos intermitentes: otros usuarios o ejecuciones previas usan esos mismos IDs.
+- Solución aplicada: generación de IDs únicos dinámicamente (ejemplo: `petId = <base> + Math.floor(Math.random() * 100000)`).
+
+4) Recomendaciones para estabilidad en CI
+-----------------------------------------
+- **WireMock**: recomendado como primera opción práctica (rápido, control total de respuestas, funciona local/CI).
+- **GitHub Actions**: integrar pipeline para ejecutar tests y publicar reportes; útil combinar con WireMock para fiabilidad.
+
+5) Conclusión final
+-------------------
+- El código y los tests funcionan correctamente según el contrato esperado y las pruebas locales.
+- Las fallas observadas no eran debidas a Karate ni al código, sino a la naturaleza pública del entorno PetStore (datos compartidos y no persistentes).
+- Para proyectos reales y pipelines es aconsejable independizar las pruebas del entorno público (WireMock o entornos dedicados) y mantener los payloads y datos de prueba separados (carpeta data).
