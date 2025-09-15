@@ -21,7 +21,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   capture_pageview:false,
   api_transport:'sendBeacon',
   loaded: function(posthog) { 
-    posthog.capture("report_feature",{distinct_id:"3de6411b-8b80-470e-9959-83ad903d6676",karate_version:"1.5.0",karate_meta:null});
+    posthog.capture("report_feature",{distinct_id:"7f6ad2fa-75b5-45b2-87be-9a4be35a8f01",karate_version:"1.5.0",karate_meta:null});
   }
 });
 </script>
@@ -38,8 +38,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">2</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">1</div>
     </div>
   </div>
   <div id="nav-env">
@@ -49,12 +49,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-09-15 01:36:39 AM</div>
+    <div>2025-09-15 01:53:39 AM</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1:6]"><span>[1:6]</span> <span>Buscar mascota por Id</span></a>
           </div>
           <div class="nav-item passed">
@@ -83,8 +83,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>937</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>839</span>
             </div>
           </div>
           <div class="step-row">
@@ -116,7 +116,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">01:36:37.562 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">01:53:37.618 karate.env system property was: null 
 </div>   
 
   
@@ -130,13 +130,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.7">
-      <div class="step-ref passed">7</div>
+      <div class="step-ref failed">7</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>*</span>&nbsp;<span>def result = call read(&#39;create_pet.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">833</div>
+    <div class="time-cell failed">838</div>
   </div>
 
    
@@ -145,7 +145,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.7">01:53:38.503 classpath:com/petstore/search_pet.feature:7
+* def result = call read(&#39;create_pet.feature&#39;)
+status code was: 404, expected: 200, response time in milliseconds: 108, url: https://petstore.swagger.io/v2/pet/117816, response: 
+{&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Pet not found&quot;}
+classpath:com/petstore/create_pet.feature:25
+classpath:com/petstore/search_pet.feature:7
+</div>   
 
   <div>
         
@@ -155,7 +161,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <div class="step-indent"></div>
         <div class="step-cell passed">com.petstore.create_pet</div>
       </div>
-      <div class="time-cell passed">794</div>
+      <div class="time-cell passed">800</div>
     </div>
     <div>
       <div><div>
@@ -199,7 +205,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def petId = Math.floor(Math.random() * 100000) + 100000</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -227,7 +233,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def petName = &#39;Firulais&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -255,7 +261,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def petStatus = &#39;available&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
@@ -283,7 +289,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def requestBody = read(&#39;data/create_modify_pet_request.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">38</div>
+    <div class="time-cell passed">30</div>
   </div>
 
    
@@ -339,7 +345,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>request requestBody</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -367,7 +373,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">617</div>
+    <div class="time-cell passed">621</div>
   </div>
 
    
@@ -376,7 +382,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.7.0.call.1.14">01:36:37.830 request:
+  <div class="preformatted" data-parent="0.7.0.call.1.14">01:53:37.889 request:
 1 &gt; POST https://petstore.swagger.io/v2/pet
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 145
@@ -384,11 +390,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;id&quot;:134917,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Firulais&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}
+{&quot;id&quot;:117816,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Firulais&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}
 
-01:36:38.306 response time in milliseconds: 468
+01:53:38.355 response time in milliseconds: 458
 1 &lt; 200
-1 &lt; Date: Mon, 15 Sep 2025 01:36:38 GMT
+1 &lt; Date: Mon, 15 Sep 2025 01:53:38 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -396,7 +402,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 &lt; Server: Jetty(9.2.9.v20150224)
-{&quot;id&quot;:134917,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Firulais&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}
+{&quot;id&quot;:117816,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Firulais&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}
 
 </div>   
 
@@ -445,7 +451,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response.id == petId</span>
       </div>
     </div>
-    <div class="time-cell passed">13</div>
+    <div class="time-cell passed">12</div>
   </div>
 
    
@@ -473,7 +479,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response.name == petName</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -529,7 +535,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def createdPetId = response.id</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -566,7 +572,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.7.0.call.1.21">01:36:38.329 [print] pet id creado: 134917 
+  <div class="preformatted" data-parent="0.7.0.call.1.21">01:53:38.381 [print] pet id creado: 117816 
 </div>   
 
   
@@ -586,7 +592,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>path &#39;/v2/pet/&#39;, createdPetId</span>
       </div>
     </div>
-    <div class="time-cell passed">6</div>
+    <div class="time-cell passed">8</div>
   </div>
 
    
@@ -614,7 +620,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">104</div>
+    <div class="time-cell passed">113</div>
   </div>
 
    
@@ -623,17 +629,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.7.0.call.1.24">01:36:38.337 request:
-2 &gt; GET https://petstore.swagger.io/v2/pet/134917
+  <div class="preformatted" data-parent="0.7.0.call.1.24">01:53:38.391 request:
+2 &gt; GET https://petstore.swagger.io/v2/pet/117816
 2 &gt; Host: petstore.swagger.io
 2 &gt; Connection: Keep-Alive
 2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
 2 &gt; Accept-Encoding: gzip,deflate
 
 
-01:36:38.438 response time in milliseconds: 99
-2 &lt; 200
-2 &lt; Date: Mon, 15 Sep 2025 01:36:38 GMT
+01:53:38.501 response time in milliseconds: 108
+2 &lt; 404
+2 &lt; Date: Mon, 15 Sep 2025 01:53:38 GMT
 2 &lt; Content-Type: application/json
 2 &lt; Transfer-Encoding: chunked
 2 &lt; Connection: keep-alive
@@ -641,7 +647,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 2 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 2 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 2 &lt; Server: Jetty(9.2.9.v20150224)
-{&quot;id&quot;:134917,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Firulais&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}
+{&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Pet not found&quot;}
 
 </div>   
 
@@ -656,13 +662,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row" data-parent="0.7.0.call">
     <div class="step-container" id="0.7.0.call.1.25">
-      <div class="step-ref passed">25</div>
+      <div class="step-ref failed">25</div>
       <div class="step-indent"></div>
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -671,7 +677,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.7.0.call.1.25">01:53:38.503 classpath:com/petstore/create_pet.feature:25
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 108, url: https://petstore.swagger.io/v2/pet/117816, response: 
+{&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Pet not found&quot;}
+classpath:com/petstore/create_pet.feature:25
+</div>   
 
   
 
@@ -684,13 +695,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row" data-parent="0.7.0.call">
     <div class="step-container" id="0.7.0.call.1.26">
-      <div class="step-ref passed">26</div>
+      <div class="step-ref skipped">26</div>
       <div class="step-indent"></div>
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>match response.id == createdPetId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -712,13 +723,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row" data-parent="0.7.0.call">
     <div class="step-container" id="0.7.0.call.1.28">
-      <div class="step-ref passed">28</div>
+      <div class="step-ref skipped">28</div>
       <div class="step-indent"></div>
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def result = { petId: createdPetId, petName: petName, petStatus: petStatus }</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -745,13 +756,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.8">
-      <div class="step-ref passed">8</div>
+      <div class="step-ref skipped">8</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def petId = result.petId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -773,13 +784,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.9">
-      <div class="step-ref passed">9</div>
+      <div class="step-ref skipped">9</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print &#39;Buscando mascota con ID:&#39;, petId</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -788,8 +799,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.9">01:36:38.446 [print] Buscando mascota con ID: 134917 
-</div>   
+     
 
   
 
@@ -802,13 +812,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.10">
-      <div class="step-ref passed">10</div>
+      <div class="step-ref skipped">10</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Given</span>&nbsp;<span>path &#39;/v2/pet/&#39;, petId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -830,13 +840,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.11">
-      <div class="step-ref passed">11</div>
+      <div class="step-ref skipped">11</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">96</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -845,27 +855,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.11">01:36:38.448 request:
-1 &gt; GET https://petstore.swagger.io/v2/pet/134917
-1 &gt; Host: petstore.swagger.io
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-01:36:38.538 response time in milliseconds: 89
-1 &lt; 200
-1 &lt; Date: Mon, 15 Sep 2025 01:36:38 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 &lt; Server: Jetty(9.2.9.v20150224)
-{&quot;id&quot;:134917,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Firulais&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}
-
-</div>   
+     
 
   
 
@@ -878,13 +868,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
+      <div class="step-ref skipped">12</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -906,13 +896,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
+      <div class="step-ref skipped">13</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>match response.id == petId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -934,13 +924,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
+      <div class="step-ref skipped">14</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>match response.name == result.petName</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -969,7 +959,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>726</span>
+              <span>ms:</span>&nbsp;<span>724</span>
             </div>
           </div>
           <div class="step-row">
@@ -992,7 +982,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>url &#39;https://petstore.swagger.io&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -1001,7 +991,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">01:36:37.562 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">01:53:37.621 karate.env system property was: null 
 </div>   
 
   
@@ -1077,7 +1067,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">703</div>
+    <div class="time-cell passed">694</div>
   </div>
 
    
@@ -1086,7 +1076,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.20">01:36:37.831 request:
+  <div class="preformatted" data-parent="0.20">01:53:37.888 request:
 1 &gt; GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
 1 &gt; Host: petstore.swagger.io
 1 &gt; Connection: Keep-Alive
@@ -1094,9 +1084,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-01:36:38.306 response time in milliseconds: 467
+01:53:38.356 response time in milliseconds: 459
 1 &lt; 200
-1 &lt; Date: Mon, 15 Sep 2025 01:36:38 GMT
+1 &lt; Date: Mon, 15 Sep 2025 01:53:38 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -1104,7 +1094,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 &lt; Server: Jetty(9.2.9.v20150224)
-[{&quot;id&quot;:9,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;cats&quot;},&quot;name&quot;:&quot;King Kong&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:61,&quot;category&quot;:{&quot;id&quot;:13,&quot;name&quot;:&quot;futbol&quot;},&quot;name&quot;:&quot;Melani&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:179480,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Rocco&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:13,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;cats&quot;},&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9222968140497180740,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;test&quot;},&quot;name&quot;:&quot;cattie&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;cat&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:311539,&quot;category&quot;:{&quot;id&quot;:458142,&quot;name&quot;:&quot;&quot;},&quot;name&quot;:&quot;Elwanek&quot;,&quot;photoUrls&quot;:[&quot;/Users/a/Documents/Sel/workspace/PetStoreAPITesting1 &quot;],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;}]
+[{&quot;id&quot;:9,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;cats&quot;},&quot;name&quot;:&quot;King Kong&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:12,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;dogs&quot;},&quot;name&quot;:&quot;Fido&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:61,&quot;category&quot;:{&quot;id&quot;:13,&quot;name&quot;:&quot;futbol&quot;},&quot;name&quot;:&quot;Melani&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:179480,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Rocco&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:13,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;cats&quot;},&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9222968140497180740,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;test&quot;},&quot;name&quot;:&quot;cattie&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;cat&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:311539,&quot;category&quot;:{&quot;id&quot;:458142,&quot;name&quot;:&quot;&quot;},&quot;name&quot;:&quot;Elwanek&quot;,&quot;photoUrls&quot;:[&quot;/Users/a/Documents/Sel/workspace/PetStoreAPITesting1 &quot;],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;}]
 
 </div>   
 
@@ -1153,7 +1143,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match each response[*].status == &#39;sold&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">21</div>
+    <div class="time-cell passed">24</div>
   </div>
 
    
